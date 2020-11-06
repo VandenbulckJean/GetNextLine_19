@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-int	static		read_next_line(int fd, char **linebuffer)
+int			read_next_line(int fd, char **linebuffer)
 {
 	char	buffer[BUFFER_SIZE + 1];
 	int		ret;
@@ -32,10 +32,10 @@ int	static		read_next_line(int fd, char **linebuffer)
 	return (0);
 }
 
-char static		*cutafternewline(char *linebuffer)
+char			*cutafternewline(char *linebuffer)
 {
-	char *newline;
-	int newlinemarker;
+	char	*newline;
+	int		newlinemarker;
 
 	newlinemarker = 0;
 	while (linebuffer[newlinemarker] != '\n' && linebuffer[newlinemarker])
@@ -48,7 +48,7 @@ char static		*cutafternewline(char *linebuffer)
 	return (newline);
 }
 
-char static		*getreadyfornextline(char *bufferline)
+char			*getreadyfornextline(char *bufferline)
 {
 	int		newlinemarker;
 	int		i;
