@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvanden- </var/mail/jvanden->              +#+  +:+       +#+        */
+/*   By: jvanden- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 13:26:14 by jvanden-          #+#    #+#             */
 /*   Updated: 2020/11/06 13:27:03 by jvanden-         ###   ########.fr       */
