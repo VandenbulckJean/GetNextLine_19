@@ -48,7 +48,7 @@ char static		*cutafternewline(char *linebuffer)
 	return (newline);
 }
 
-char static		*getreadyfornexline(char *bufferline)
+char static		*getreadyfornextline(char *bufferline)
 {
 	int		newlinemarker;
 	int		i;
@@ -87,7 +87,7 @@ int				get_next_line(int fd, char **line)
 	if (!(*line = cutafternewline(fd_line_buffer[fd])))
 		return (-1);
 	if (returnvalue == 1)
-		fd_line_buffer[fd] = getreadyfornexline(fd_line_buffer[fd]);
+		fd_line_buffer[fd] = getreadyfornextline(fd_line_buffer[fd]);
 	else
 	{
 		free(fd_line_buffer[fd]);
