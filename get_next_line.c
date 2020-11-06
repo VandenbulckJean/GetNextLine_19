@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jeanvandenbulck <jeanvandenbulck@studen    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/22 12:05:37 by jeanvandenb       #+#    #+#             */
-/*   Updated: 2020/11/06 12:50:01 by jeanvandenb      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "get_next_line.h"
 
 int	static		read_next_line(int fd, char **linebuffer)

@@ -1,14 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jeanvandenbulck <jeanvandenbulck@studen    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/22 12:05:41 by jeanvandenb       #+#    #+#             */
-/*   Updated: 2020/11/06 12:48:18 by jeanvandenb      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 #include "get_next_line.h"
 
 size_t	ft_strlen(const char *s)
@@ -23,9 +12,9 @@ size_t	ft_strlen(const char *s)
 
 char	*ft_strjoin(char *line, char *buffer)
 {
-	char *newline;
-	char *temp;
-	int i;
+	char	*newline;
+	char	*temp;
+	int		i;
 
 	i = 0;
 	if (!(newline = (char*)malloc(sizeof(char) *
