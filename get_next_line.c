@@ -32,7 +32,7 @@ int			read_next_line(int fd, char **linebuffer)
 	return (0);
 }
 
-char			*cutafternewline(char *linebuffer)
+char		*cutafternewline(char *linebuffer)
 {
 	char	*newline;
 	int		newlinemarker;
@@ -48,7 +48,7 @@ char			*cutafternewline(char *linebuffer)
 	return (newline);
 }
 
-char			*getreadyfornextline(char *bufferline)
+char		*getreadyfornextline(char *bufferline)
 {
 	int		newlinemarker;
 	int		i;
@@ -58,7 +58,8 @@ char			*getreadyfornextline(char *bufferline)
 	newlinemarker = 0;
 	while (bufferline[newlinemarker] != '\n' && bufferline[newlinemarker])
 		newlinemarker++;
-	if (!(newbufferline = malloc(sizeof(char) * (ft_strlen(bufferline) - newlinemarker + 1))))
+	if (!(newbufferline = malloc(sizeof(char) *
+	(ft_strlen(bufferline) - newlinemarker + 1))))
 		return (0);
 	if (bufferline[newlinemarker])
 		newlinemarker++;
@@ -69,7 +70,7 @@ char			*getreadyfornextline(char *bufferline)
 	return (newbufferline);
 }
 
-int				get_next_line(int fd, char **line)
+int			get_next_line(int fd, char **line)
 {
 	static char	*fd_line_buffer[FOPEN_MAX];
 	int			returnvalue;
@@ -92,7 +93,6 @@ int				get_next_line(int fd, char **line)
 	{
 		free(fd_line_buffer[fd]);
 		fd_line_buffer[fd] = 0;
-		
 	}
 	return (returnvalue);
 }
