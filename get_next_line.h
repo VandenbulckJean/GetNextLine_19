@@ -22,6 +22,8 @@
 # include <sys/uio.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <fcntl.h>
+# include <limits.h>
 
 size_t		ft_strlen(const char *s);
 char		*ft_strjoin(char *s1, char *s2);
