@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvanden- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jeanvandenbulck <jeanvandenbulck@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 13:26:14 by jvanden-          #+#    #+#             */
-/*   Updated: 2020/11/06 13:27:03 by jvanden-         ###   ########.fr       */
+/*   Updated: 2020/11/09 10:09:49 by jeanvandenb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 # include <fcntl.h>
 # include <limits.h>
 
-size_t		ft_strlen(const char *s);
+int			ft_strlen(const char *s);
 char		*ft_strjoin(char *s1, char *s2);
 int			newlinefound(char *s);
 int			get_next_line(int fd, char **line);

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvanden- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jeanvandenbulck <jeanvandenbulck@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 13:25:21 by jvanden-          #+#    #+#             */
-/*   Updated: 2020/11/06 13:25:23 by jvanden-         ###   ########.fr       */
+/*   Updated: 2020/11/09 10:09:40 by jeanvandenb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(const char *s)
+int		ft_strlen(const char *s)
 {
-	size_t i;
+	int i;
 
 	i = 0;
 	while (s[i])
