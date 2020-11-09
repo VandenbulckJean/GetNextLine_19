@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvanden- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jeanvandenbulck <jeanvandenbulck@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 13:24:54 by jvanden-          #+#    #+#             */
-/*   Updated: 2020/11/06 13:24:59 by jvanden-         ###   ########.fr       */
+/*   Updated: 2020/11/09 10:01:10 by jeanvandenb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,27 +72,26 @@ char		*getreadyfornextline(char *bufferline)
 
 int			get_next_line(int fd, char **line)
 {
-	static char	*fd_line_buffer[FOPEN_MAX];
+	static char	*linebuffer;
 	int			returnvalue;
 
 	if (fd < 0 || line == NULL || BUFFER_SIZE <= 0)
 		return (-1);
-	if (!fd_line_buffer[fd])
+	if (!linebuffer)
 	{
-		if (!(*line = malloc(sizeof(char))))
+		if (!(linebuffer = malloc(sizeof(char))))
 			return (-1);
-		*line[0] = '\0';
-		fd_line_buffer[fd] = *line;
+		linebuffer[0] = '\0';
 	}
-	returnvalue = read_next_line(fd, &fd_line_buffer[fd]);
-	if (!(*line = cutafternewline(fd_line_buffer[fd])))
+	returnvalue = read_next_line(fd, &linebuffer);
+	if (!(*line = cutafternewline(linebuffer)))
 		return (-1);
 	if (returnvalue == 1)
-		fd_line_buffer[fd] = getreadyfornextline(fd_line_buffer[fd]);
+		linebuffer = getreadyfornextline(linebuffer);
 	else
 	{
-		free(fd_line_buffer[fd]);
-		fd_line_buffer[fd] = 0;
+		free(linebuffer);
+		linebuffer = 0;
 	}
 	return (returnvalue);
 }
